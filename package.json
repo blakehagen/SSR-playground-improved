@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development node ./server/development.js",
     "build": "NODE_ENV=production webpack -p --config ./webpack/webpack.production.config.js --progress --colors",
-    "prod": "NODE_ENV=production webpack -p --config ./webpack/webpack.production.config.js --progress --colors && node ./server/production.js",
-    "heroku-postbuild": "npm run prod"
+    "prod": "NODE_ENV=production webpack -p --config ./webpack/webpack.production.config.js --progress --colors && node ./server/production.js"
   },
   "engines": {
     "node": "8.10.0",
@@ -24,9 +23,7 @@
     "react": "16.3.2",
     "react-dom": "16.3.2",
     "react-helmet": "5.2.0",
-    "react-router-dom": "4.2.2"
-  },
-  "devDependencies": {
+    "react-router-dom": "4.2.2",
     "autoprefixer": "8.3.0",
     "babel-core": "6.24.1",
     "babel-loader": "7.0.0",
