@@ -5,7 +5,7 @@ import {Switch, Route, NavLink} from 'react-router-dom';
 import Home from './components/Home';
 import Menu from './components/Menu';
 
-import styles from '../styles/styles.scss';
+// import styles from '../styles/styles.scss';
 
 class About extends Component {
     render () {

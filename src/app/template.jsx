@@ -1,5 +1,5 @@
-export default ({ markup, helmet }) => {
-	return `<!DOCTYPE html>
+export default ({markup, helmet}) => {
+  return `<!DOCTYPE html>
 			<html ${helmet.htmlAttributes.toString()}>
 				<head>
 					${helmet.title.toString()}
