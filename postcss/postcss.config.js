@@ -7,7 +7,7 @@ module.exports = {
     plugins: {
         'postcss-partial-import': {
             'prefix': '_',
-            'extension': '.pcss',
+            'extension': '.scss',
             'glob': false,
             'path': ['./../src/styles']
         },

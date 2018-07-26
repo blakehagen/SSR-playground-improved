@@ -1,42 +1,11 @@
 import React, {Component} from 'react';
 import Helmet from "react-helmet";
-import {Switch, Route} from 'react-router-dom';
-import {Link, NavLink} from 'react-router-dom';
-import styles from '../styles/styles.pcss';
+import {Switch, Route, NavLink} from 'react-router-dom';
 
-class Menu extends Component {
-    render() {
-        return (
-            <div>
-                <ul>
-                    <li>
-                        <NavLink exact to={'/'} activeClassName={styles.active}>Homepage</NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName={styles.active} to={'/about'}>About</NavLink>
-                    </li>
-                    <li>
-                        <NavLink activeClassName={styles.active} to={'/contact'}>Contact</NavLink>
-                    </li>
-                </ul>
-            </div>
-        );
-    }
-}
+import Home from './components/Home';
+import Menu from './components/Menu';
 
-
-class Homepage extends Component {
-
-    render () {
-        return (
-            <div className={styles.component}>
-                <Helmet title="Welcome to our Homepage"/>
-                <Menu/>
-                <h1>Homepage</h1>
-            </div>
-        );
-    }
-}
+import styles from '../styles/styles.scss';
 
 class About extends Component {
     render () {
@@ -79,7 +48,7 @@ export default class App extends Component {
                     link={[{rel: "stylesheet", href: "/dist/styles.css"}]}
                 />
                 <Switch>
-                    <Route exact path='/' component={Homepage}/>
+                    <Route exact path='/' component={Home}/>
                     <Route path='/about' component={About}/>
                     <Route path='/contact' component={Contact}/>
                 </Switch>

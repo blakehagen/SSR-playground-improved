@@ -13,7 +13,7 @@ indent_style = space
 [*.{js,jsx}]
 indent_size = 4
 
-[*.pcss]
+[*.scss]
 indent_size = 4
 
 [{package.json}]

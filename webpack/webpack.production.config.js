@@ -33,17 +33,17 @@ module.exports = [
                     ]
                 },
                 {
-                    test: /\.pcss$/,
+                    test: /\.scss$/,
                     use: ExtractTextPlugin.extract({
                         fallback: 'style-loader',
                         use: [
                             {
                                 loader: 'css-loader',
                                 options: {
-                                    modules: true,
-                                    importLoaders: 1,
-                                    localIdentName: '[hash:base64:10]',
-                                    sourceMap: false,
+                                  modules: true,
+                                  importLoaders: 2,
+                                  localIdentName: '[name]--[local]--[hash:base64:5]',
+                                  sourceMap: true
                                 }
                             },
                             {
@@ -106,7 +106,7 @@ module.exports = [
                     ]
                 },
                 {
-                    test: /\.pcss$/,
+                    test: /\.scss$/,
                     use: [
                         {
                             loader: 'isomorphic-style-loader',
@@ -114,10 +114,10 @@ module.exports = [
                         {
                             loader: 'css-loader',
                             options: {
-                                modules: true,
-                                importLoaders: 1,
-                                localIdentName: '[hash:base64:10]',
-                                sourceMap: false
+                              modules: true,
+                              importLoaders: 2,
+                              localIdentName: '[name]--[local]--[hash:base64:5]',
+                              sourceMap: true
                             }
                         },
                         {
