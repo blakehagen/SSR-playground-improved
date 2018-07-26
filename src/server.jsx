@@ -7,7 +7,6 @@ import App from './app/App';
 
 export default function serverRenderer({clientStats, serverStats}) {
     return (req, res, next) => {
-        console.log('req.url -->', req.url);
         const context = {};
         const markup = ReactDOMServer.renderToString(
             <StaticRouter location={req.url} context={context}>
